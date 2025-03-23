@@ -8,6 +8,8 @@ Through this process, it is assumed that all the data is stored under the folder
 
 For this code the used dataset is the one of "all data types". 
 
+The result is a spreadsheet (csv) with the following shape
+![Foods](image-1.png)
 
 Documentation of USDA Foundation Foods:
 https://fdc.nal.usda.gov/Foundation_Foods_Documentation

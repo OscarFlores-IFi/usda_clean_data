@@ -13,8 +13,10 @@ nutrient = pd.read_csv(os.path.join(directory_path, 'nutrient.csv'))
 food_category = pd.read_csv(os.path.join(directory_path, 'food_category.csv'))
 food_category = food_category.rename(columns={"description": "CATEGORY"})
 
+# BRANDED PRODUCTS ARE VERY UNSTABLE
+# food = food[food["data_type"]!="branded_food"] # Can uncomment this to get rid of branded products
 food = food.drop_duplicates(subset=["fdc_id","data_type","description","food_category_id"])
-print(f"In total, {food["fdc_id"].nunique()} unique products were found")
+print(f'In total, {food["fdc_id"].nunique()} unique products were found')
 
 # pre-process food nutrients
 #### WHAT ABOUT THE DUPLICATES?? (AROUND 2400, ALL BRANDED FOODS, WHAT SHOULD WE DO WITH THEM?)
